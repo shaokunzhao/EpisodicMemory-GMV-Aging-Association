@@ -50,7 +50,7 @@ for i = 1:numel(subs)
 
                             ResVol_tem = ResVol .* Vol_mask_tmp;
 
-                            table{j+1, mask_order+5} = mean(mean(mean(ResVol_tem)));
+                            table{j+1, mask_order+5} = mean(mean(mean(ResVol_tem,'omitnan'),'omitnan'),'omitnan');
                             if isnan(table{j+1, mask_order+5})
                                 table{j+1, mask_order+5} = 0;
                             end
