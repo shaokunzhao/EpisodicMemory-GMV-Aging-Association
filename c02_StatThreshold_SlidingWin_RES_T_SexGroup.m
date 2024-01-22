@@ -41,7 +41,7 @@ for m = 1:numel(subs)
                 %% Positive result
                 tmpResVol_posi = tmpVol;
                 x = find(tmpVol < Tthre);
-                tmpResVol_posi(x) = 0;   
+                tmpResVol_posi(x) = NaN;   
                 vmax_p = max(max(max(tmpResVol_posi)));
                 
                 if vmax_p ~= 0
